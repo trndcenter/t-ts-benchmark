@@ -1,0 +1,4 @@
+allure_id;test_file_path;test_method;test_content
+1;path/to/test1.kt;test_method1;"test content of path/to/test1.kt test_method1"
+2;path/to/test2.kt;test_method2;"test content of path/to/test2.kt test_method2"
+3;path/to/test3.kt;test_method3;"test content of path/to/test3.kt test_method3"

@@ -1,0 +1,47 @@
+save_dataset: False
+target: "status"
+
+creator: !ClusteringDatasetCreator
+  inference: False
+  without_unstable: True
+  graph_based_clustering: True
+
+transformer: !XGBTransformer
+  drop_patterns:
+    - "vcs_commit_sha"
+    - "allure_id"
+    - "test_file_path"
+    - "test_method"
+    - "unknown_files_count"
+    - "test_case_id"
+    - "_file_extension"
+    - "_changed"
+    - "_number_changes_14d"
+    - "_number_changes_56d"
+  file_drop_patterns:
+    - "_lines_added"
+    - "_lines_deleted"
+  file_features:
+    - "number_changes_3d"
+    - "number_changes_14d"
+    - "number_changes_56d"
+    - "distinct_authors"
+    - "change_type"
+    - "lines_added"
+    - "lines_deleted"
+    - "changed"
+  preprocessing_files: False
+  frequent_files_limit: 6000
+  sparse: True
+
+model: !GBCXGBModel
+  objective: "binary:logistic"
+  max_depth: 3
+  learning_rate: 0.07272710602456586
+  n_estimators: 300
+  min_child_weight: 10
+  colsample_bytree: 0.48974814671431044
+  subsample: 0.5664090717099939
+  reg_alpha: 0.014022071714841626
+  reg_lambda: 0.026176884279133304
+  scale_pos_weight: 0.2454826013327081

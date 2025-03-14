@@ -1,0 +1,22 @@
+model: !RedhModel
+  path_dataset: 'benchmarks/datasets/redh.csv'
+  split_date: '2021-09-02 00:00:00'
+  drop_cols:
+    - 'file_name'
+    - 'test_file'
+    - 'project_name'
+    - 'test_name'
+  cat_cols:
+    - 'file_extension'
+    - 'date'
+  params:
+    max_depth: 5
+    learning_rate: 0.06183330153194687
+    n_estimators: 242
+    min_child_weight: 3
+    colsample_bytree: 0.962936243090402
+    subsample: 0.8421938422049335
+    reg_alpha: 0.020692786179969003
+    reg_lambda: 0.0008794864534051801
+    scale_pos_weight: 0.5275812615330042
+    seed: 0

@@ -1,0 +1,59 @@
+save_dataset: False
+target: "status"
+creator: !DatasetCBAStats
+  inference: False
+  cba_params:
+    objective: "binary:logistic"
+    max_depth: 5
+    learning_rate: 0.0950278331935827
+    n_estimators: 150
+    min_child_weight: 6
+    colsample_bytree: 0.5948987568971594
+    subsample: 0.6237332561489384
+    reg_alpha: 0.017060359146503844
+    reg_lambda: 0.003475249912321713
+    scale_pos_weight: 0.991636657187433
+  model_name: "bigcode/starencoder"
+  num_important_coordinates: 100
+
+transformer: !XGBTransformer
+  drop_patterns:
+    - "vcs_commit_sha"
+    - "allure_id"
+    - "test_file_path"
+    - "test_method"
+    - "unknown_files_count"
+    - "test_case_id"
+    - "_file_extension"
+    - "_changed"
+    - "_number_changes_14d"
+    - "_number_changes_56d"
+    - "test_content"
+    - "code_diff"
+  file_drop_patterns:
+    - "_lines_added"
+    - "_lines_deleted"
+  file_features:
+    - "number_changes_3d"
+    - "number_changes_14d"
+    - "number_changes_56d"
+    - "distinct_authors"
+    - "change_type"
+    - "lines_added"
+    - "lines_deleted"
+    - "changed"
+  preprocessing_files: False
+  frequent_files_limit: 6000
+  sparse: True
+
+model: !XGBModel
+  objective: "binary:logistic"
+  max_depth: 3
+  learning_rate: 0.07272710602456586
+  n_estimators: 300
+  min_child_weight: 10
+  colsample_bytree: 0.48974814671431044
+  subsample: 0.5664090717099939
+  reg_alpha: 0.014022071714841626
+  reg_lambda: 0.026176884279133304
+  scale_pos_weight: 0.2454826013327081

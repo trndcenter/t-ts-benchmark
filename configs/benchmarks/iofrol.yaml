@@ -1,0 +1,20 @@
+model: !IofrolGsdtsrModel
+  path_dataset: 'benchmarks/datasets/iofrol.csv'
+  test_size: 0.4
+  drop_cols:
+    - 'Id'
+    - 'CalcPrio'
+    - 'LastRun'
+    - 'Name'
+  verbose: 0
+  params:
+    max_depth: 3
+    learning_rate: 0.02592228378277362
+    n_estimators: 895
+    min_child_weight: 1
+    colsample_bytree: 0.6089250574259526
+    subsample: 0.2980504213825652
+    reg_alpha: 0.00011448018024471291
+    reg_lambda: 0.010706694446609205
+    scale_pos_weight: 0.3206291950413613
+    seed: 0
