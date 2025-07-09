@@ -1,0 +1,10 @@
+{
+    "path/to/module1": [
+      "path/to/file1.kt",
+      "path/to/file2.kt"
+    ],
+    "path/to/module2": [
+      "path/to/file3.kt",
+      "path/to/file4.kt"
+    ]
+  }
