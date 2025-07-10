@@ -1,0 +1,57 @@
+file_name;file_extension;number_changes_3d;number_changes_14d;number_changes_56d;distinct_authors;last_commit_changed_files;last_commit_sha;last_authored_date;change_type;lines_added;lines_deleted;code_diff
+path/to/file1.kt;.kt;1;1;5;3;523;0cac23f3f056b1526e0805d7b67093a9d4eac990;1727882189;M;0;-19;"diff --git a/path/to/file1.kt b/path/to/file1.kt
+index something 000000
+--- a/path/to/file1.kt
++++ b/path/to/file1.kt
+@@ 0,0 0,0 @@ something:
+    something
+[- deleted code -]{+ added code+}
+{+ added code  +}
+  something
+@@ 0,0 0,0 @@ something:
+    something
+[- deleted code -]{+ added code+}
+{+ added code  +}
+  something"
+path/to/file2.kt;.kt;1;5;10;2;523;0cac23f3f056b1526e0805d7b67093a9d4eac990;1727882189;M;0;-21;"diff --git a/path/to/file2.kt b/path/to/file2.kt
+index something 000000
+--- a/path/to/file2.kt
++++ b/path/to/file2.kt
+@@ 0,0 0,0 @@ something:
+    something
+[- deleted code -]{+ added code+}
+{+ added code  +}
+  something
+@@ 0,0 0,0 @@ something:
+    something
+[- deleted code -]{+ added code+}
+{+ added code  +}
+  something"
+path/to/file3.kt;.kt;1;5;5;1;523;0cac23f3f056b1526e0805d7b67093a9d4eac990;1727882189;M;5;-3;"diff --git a/path/to/file3.kt b/path/to/file3.kt
+index something 000000
+--- a/path/to/file3.kt
++++ b/path/to/file3.kt
+@@ 0,0 0,0 @@ something:
+    something
+[- deleted code -]{+ added code+}
+{+ added code  +}
+  something
+@@ 0,0 0,0 @@ something:
+    something
+[- deleted code -]{+ added code+}
+{+ added code  +}
+  something"
+path/to/file4.kt;.kt;1;3;3;1;523;0cac23f3f056b1526e0805d7b67093a9d4eac990;1727882189;M;0;-4;"diff --git a/path/to/file4.kt b/path/to/file4.kt
+index something 000000
+--- a/path/to/file4.kt
++++ b/path/to/file4.kt
+@@ 0,0 0,0 @@ something:
+    something
+[- deleted code -]{+ added code+}
+{+ added code  +}
+  something
+@@ 0,0 0,0 @@ something:
+    something
+[- deleted code -]{+ added code+}
+{+ added code  +}
+  something"

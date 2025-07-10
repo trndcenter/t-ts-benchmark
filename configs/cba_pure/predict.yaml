@@ -1,0 +1,8 @@
+creator: !DatasetCBA
+  inference: True
+  path_inference: False
+  train_files: False
+  model_name: "bigcode/starencoder"
+
+transformer: !CBATransformer
+  preprocessing_files: False

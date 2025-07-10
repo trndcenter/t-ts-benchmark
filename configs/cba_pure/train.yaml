@@ -1,0 +1,22 @@
+save_dataset: False
+target: "status"
+creator: !DatasetCBA
+  inference: False
+  path_inference: False
+  train_files: False
+  model_name: "bigcode/starencoder"
+
+transformer: !CBATransformer
+  preprocessing_files: False
+
+model: !XGBModel
+  objective: "binary:logistic"
+  max_depth: 5
+  learning_rate: 0.0950278331935827
+  n_estimators: 150
+  min_child_weight: 6
+  colsample_bytree: 0.5948987568971594
+  subsample: 0.6237332561489384
+  reg_alpha: 0.017060359146503844
+  reg_lambda: 0.003475249912321713
+  scale_pos_weight: 0.991636657187433
