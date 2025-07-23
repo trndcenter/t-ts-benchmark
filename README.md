@@ -59,6 +59,7 @@ python predict.py --input data_inference --model xgb --output output/output.json
 3. The prediction results, sorted in descending order of failure probability, will be available in `output/output.json`.
 
 # Files description
+```
 .
 ├── benchmarks.py - script for running benchmarks
 ├── train.py - script for training models
@@ -71,7 +72,7 @@ python predict.py --input data_inference --model xgb --output output/output.json
 │   ├── preprocessing - source files for preprocessing data (cleaning data, creating dataset, etc.)
 |   └── metrics - utils for calculation metrics 
 └── predict.py - script for inference
-
+```
 
 # License
 Targeted Test Selection is available under the Apache License 2.0. See the LICENSE file for more info.
