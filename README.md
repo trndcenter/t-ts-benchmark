@@ -28,19 +28,19 @@ huggingface-cli login --token $YOUR_HF_TOKEN
 For information about the token, visit [User Access Token](https://huggingface.co/docs/hub/security-tokens)
 
 # Benchmarks
-1. Download IOF/ROL: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GIJ5DE and place it in the root as `benchmarks/datasets/iofrol.csv`
+1. Download IOF/ROL `feature-engineered.csv`: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GIJ5DE and place it as `benchmarks/datasets/iofrol.csv`
 
-2. Download GSDTSR: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MJFKDN and place it in the root as `benchmarks/datasets/gsdtsr.csv`
+2. Download GSDTSR `feature-engineered.csv`: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MJFKDN and place it as `benchmarks/datasets/gsdtsr.csv`
 
 3. Follow the instruction in https://github.com/Amannor/redhat_final_proj/tree/main to
-create a psr.csv and place it in the root as `benchmarks/datasets/redh.csv`. We used the data saved in the Amannor's repository.
+create a psr.csv and place it as `benchmarks/datasets/redh.csv`. We used the data saved in the Amannor's repository.
 4. Run
 ```
 python benchmarks.py
 ```
 
 # Training Instructions
-1. Load the data according to the structure in the `data_structure/train_data_structure/`. Read `data_structure/INFO.md` for more information. When calling `train.py`, specify the path to this data.
+1. Load the data according to the structure in the `data_structure/train_data_structure/`. Read `data_structure/README.md` for more information. When calling `train.py`, specify the path to this data.
 
 2. Run the following command in the root of the project. You can see all of the parameters by running `python train.py --help`.
 ```zsh
@@ -57,6 +57,21 @@ python predict.py --input data_inference --model xgb --output output/output.json
 ```
 
 3. The prediction results, sorted in descending order of failure probability, will be available in `output/output.json`.
+
+# Files description
+.
+├── benchmarks.py - script for running benchmarks
+├── train.py - script for training models
+├── predict.py - script for inference
+├── configs - configs for models
+├── data_structure - data structure for training and inference
+├── src
+│   ├── benchmarks - source files for benchmarks
+│   ├── models - source files for models
+│   ├── preprocessing - source files for preprocessing data (cleaning data, creating dataset, etc.)
+|   └── metrics - utils for calculation metrics 
+└── predict.py - script for inference
+
 
 # License
 Targeted Test Selection is available under the Apache License 2.0. See the LICENSE file for more info.
